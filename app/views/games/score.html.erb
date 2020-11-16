@@ -1,0 +1,12 @@
+<h1> Result</h1>
+
+Your word: <%= @word %>
+<br>
+Message : <%= @first_part %> <strong><%= @word.upcase %></strong> <%= @message %>
+<br>
+Your Score is : <%= @score %> points 👍
+<br>
+<br>
+<%= link_to 'New Game', new_path %>
+
+<%= link_to 'Reset', reset_path %>
