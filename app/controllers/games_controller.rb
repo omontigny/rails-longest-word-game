@@ -31,7 +31,7 @@ class GamesController < ApplicationController
 
     if check_nb_letter?(@word, @letters.split(' '))
 
-      result = JSON.parse(open("https://wagon-dictionary.herokuapp.com/#{@word}").read)
+      result = JSON.parse(URI.open("https://wagon-dictionary.herokuapp.com/#{@word}").read)
 
       if result["found"]
         @first_part = "Congratulations! "
